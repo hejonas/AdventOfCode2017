@@ -25,11 +25,11 @@ namespace day1
         {
             var result = 0;
             var inputTimes2 = input + input;
-            for (int i = input.Length; i > 0; i-- )
+            for (int i = 0; i < input.Length; i++ )
             {
-                if (inputTimes2[input.Length - i] == inputTimes2[input.Length - i + numOfSteps])
+                if (inputTimes2[i] == inputTimes2[i + numOfSteps])
                 {
-                    result += int.Parse(input[input.Length - i].ToString());
+                    result += int.Parse(input[i].ToString());
                 }
             }
 
